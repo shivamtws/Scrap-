@@ -1,40 +1,3 @@
-{% comment %} <!DOCTYPE html>
-<html>
-<head>
-    <title>Instagram Content Generator</title>
-</head>
-<body>
-    <h1>Instagram Content Generator</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="url">Enter URL:</label>
-        <input type="text" name="url" id="url" required>
-        <button type="submit">Generate Instagram Content</button>
-    </form>
-
-    {% if instagram_content %}
-        <h2>Captions:</h2>
-        <p>{{ instagram_content.captions }}</p>
-
-        <h2>Hashtags:</h2>
-        <p>{{ instagram_content.hashtags }}</p>
-
-        <h2>Location Suggestions:</h2>
-        <ul>
-            {% for location in instagram_content.locations %}
-                <li>{{ location }}</li>
-            {% endfor %}
-        </ul>
-
-        <h2>Tag People Suggestions:</h2>
-        <ul>
-            {% for tag in instagram_content.tags %}
-                <li>{{ tag }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-</body>
-</html> {% endcomment %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -95,7 +58,7 @@
             <h4>Tag People : </h4>
             <p> {% for item in tag_people %} {{ item }} {% endfor %}</p>
             <p class="mt-5">
-
+              <h4>Real Text : </h4>
                 {{ url }}      
             </p>
           
