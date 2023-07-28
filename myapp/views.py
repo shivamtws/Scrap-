@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from bs4 import BeautifulSoup
 import openai
-API_KEY = "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"
+API_KEY = "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"
 
 def content(text):
     # print("Text", text)
